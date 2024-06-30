@@ -16,12 +16,14 @@ const messageField = document.querySelector(
 const localStorageKey = 'feedback-form-state';
 
 if (localStorage.getItem(localStorageKey) != null) {
-  form.elements.email.value =
-    JSON.parse(localStorage.getItem(localStorageKey)).email ?? '';
+  form.elements.email.value = JSON.parse(
+    localStorage.getItem(localStorageKey)
+  ).email;
   formData.email = form.elements.email.value;
 
-  form.elements.message.value =
-    JSON.parse(localStorage.getItem(localStorageKey)).message ?? '';
+  form.elements.message.value = JSON.parse(
+    localStorage.getItem(localStorageKey)
+  ).message;
   formData.message = form.elements.message.value;
 }
 
