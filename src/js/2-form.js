@@ -29,10 +29,10 @@ if (localStorage.getItem(localStorageKey) != null) {
 
 form.addEventListener('input', event => {
   if (event.target.nodeName == 'INPUT') {
-    formData.email = event.target.value;
+    formData.email = event.target.value.trim();
   }
   if (event.target.nodeName == 'TEXTAREA') {
-    formData.message = event.target.value;
+    formData.message = event.target.value.trim();
   }
   localStorage.setItem(localStorageKey, JSON.stringify(formData));
 });
